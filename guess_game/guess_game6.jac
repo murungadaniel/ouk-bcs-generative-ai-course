@@ -1,10 +1,18 @@
 """A Number Guessing Game"""
 
+# Correct way to get environment variable in Jac is to do it inside a Python block or in a function
+::py::
+import os
+api_key = os.getenv('GEMINI_API_KEY')
+::py::
+
 import random;
 import from byllm.llm { Model }
 
 # glob llm = Model(model_name="gpt-4o",verbose=False);
- glob llm = Model(model_name="gemini/gemini-2.0-flash", verbose=False);
+ glob llm = Model( model_name="gemini/gemini-2.0-flash", 
+                   api_key=api_key,
+                   verbose=False);
 
 """Provide a fun hint if guess is incorrect"""
 def give_hint(guess: int, correct_number: int) -> str by llm();
