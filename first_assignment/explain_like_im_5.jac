@@ -59,8 +59,9 @@ walker TextRewriter {
 with entry:__main__ {
     # Example usage: user pastes a complex paragraph
     complex_paragraph = """
-                            Agreed. It’s absurd that companies still equate physical presence with actual output.
-                            Remote autonomy increases task ownership and mitigates context switching fatigue.
+                            Area is the measure of a region's size on a surface. 
+                            The area of a plane region or plane area refers to the area of a shape or planar lamina, 
+                            while surface area refers to the area of an open surface or the boundary of a three-dimensional object.
                         """;
     # Spawn the walker with input text
     root spawn TextRewriter(input_text=complex_paragraph);
