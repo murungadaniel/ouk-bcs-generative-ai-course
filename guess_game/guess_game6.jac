@@ -8,6 +8,7 @@ import from byllm.llm { Model }
 # glob llm = Model(model_name="gpt-4o",verbose=False);
 glob llm = Model(model_name="gemini/gemini-2.0-flash", verbose=False);
 
+
 def load_and_cache_api_key(){
     # Load variables from .env into the environment
     ld();
