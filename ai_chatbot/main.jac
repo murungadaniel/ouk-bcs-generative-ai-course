@@ -27,12 +27,25 @@ def get_answer(question: str)-> str by llm (
     # return "Answer";
 );
 
+# with entry {
+#     let user_input = input("Ask any question (type 'exit' to quit): ");
+#     if user_input.lower() == "exit" {
+#         print("Goodbye!");
+#     } else {
+#         let response = get_answer(user_input);
+#         print("AI says:", response);
+#     }
+# }
+
 with entry {
-    let user_input = input("Ask any question (type 'exit' to quit): ");
-    if user_input.lower() == "exit" {
-        print("Goodbye!");
-    } else {
-        let response = get_answer(user_input);
-        print("AI says:", response);
+    while True {
+        let user_input = input("Ask any question (type 'exit' to quit): ");
+        if user_input.lower() == "exit" {
+            print("Goodbye!");
+            break;
+        } else {
+            let response = get_answer(user_input);
+            print("AI says:", response);
+        }
     }
 }
