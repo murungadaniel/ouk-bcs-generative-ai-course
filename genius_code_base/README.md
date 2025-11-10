@@ -13,24 +13,6 @@ Built with **Jac + FastAPI + Gemini 2.5 Flash + Streamlit**.
 ---
 
 ## Project Structure
- codebase_genius/
-│
-├── BE/                     # Backend (Jac + FastAPI)
-│   ├── main.jac            # Entry module for Jac API server
-│   ├── walker_codebase_genius.jac  # Jac walker stub (registered endpoint)
-│   ├── supervisor.jac      # Basic node definition
-│   ├── api.py              # FastAPI backend (Gemini 2.5 Flash logic)
-│   ├── outputs/            # Generated Markdown docs
-│   └── .env                # Environment variables
-│
-├── FE/                     # Frontend (Streamlit)
-│   ├── app.py              # Main Streamlit app
-│   └── components/
-│       ├── chat.py         # Simple chat interface
-│       └── docs_viewer.py  # Markdown viewer
-│
-└── README.md               # Project documentation (this file)
-
 
 ## Setup
 
@@ -59,51 +41,41 @@ Built with **Jac + FastAPI + Gemini 2.5 Flash + Streamlit**.
      cd ../FE
      pip install -r requirements.txt
      ```
-# 4️ Configure environment variables
+     
+4. **Add your API key**
 
-Create a file named .env inside the BE/ directory:
-
-GEMINI_API_KEY=your_real_gemini_api_key_here
-JAC_SERVER_URL=http://localhost:8000
-FASTAPI_PORT=8080
-JAC_VERBOSE=false
-
-
-# Gemini API Key:
-Obtain one from Google AI Studio
-.
+     Create `BE/.env`:
+    
+     ```env
+     GEMINI_API_KEY=your-key-here
+     JAC_SERVER_URL=http://localhost:8000
+     FASTAPI_PORT=8080
+     JAC_VERBOSE=false
+     ```
 
 # Running the System
 
-You’ll run three terminals (or processes):
+  - You’ll run three terminals (or processes):
 
-# Terminal 1 – Jac API Server
-cd BE
-jac serve main.jac --port 8000
+###  Terminal 1 – Jac API Server
+     ```
+     cd BE
+     jac serve main.jac --port 8000
+     ```
+    
+###  Terminal 2 – FastAPI Backend
+     ```
+     cd BE
+     python api.py
+     ```
 
+###  Terminal 3 – Streamlit Frontend
+     ```
+     cd FE
+     streamlit run app.py
+     ```
 
-Expected output:
-
-Jac API Server running on http://0.0.0.0:8000
-Available endpoints:
-  POST /walker/codebase_genius
-
-#  Terminal 2 – FastAPI Backend
-cd BE
-python api.py
-
-
-Expected output:
-
-INFO:     Uvicorn running on http://0.0.0.0:8080
-
-#  Terminal 3 – Streamlit Frontend
-cd FE
-streamlit run app.py
-
-
-Then open http://localhost:8501
- in your browser.
+     - Then open `http://localhost:8501` in your browser.
 
 #  How It Works
 
