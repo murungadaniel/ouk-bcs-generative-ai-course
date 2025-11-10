@@ -59,23 +59,26 @@ Built with **Jac + FastAPI + Gemini 2.5 Flash + Streamlit**.
   - You’ll run three terminals (or processes):
 
 ###  Terminal 1 – Jac API Server
+
      ```bash
      cd BE
      jac serve main.jac --port 8000
      ```
     
 ###  Terminal 2 – FastAPI Backend
+
      ```bash
      cd BE
      python api.py
      ```
 
 ###  Terminal 3 – Streamlit Frontend
+
      ```bash
      cd FE
      streamlit run app.py
      ```
-
+     
      - Then open `http://localhost:8501` in your browser.
 
 ## How to Use
@@ -112,9 +115,11 @@ Built with **Jac + FastAPI + Gemini 2.5 Flash + Streamlit**.
 # Codebase Documentation
 
    ## Overview
+   
       The `requests` library provides an elegant and Pythonic interface for making HTTP requests.
    
    ## Repository Structure
+   
       - requests/
         - api.py
         - models.py
@@ -122,6 +127,7 @@ Built with **Jac + FastAPI + Gemini 2.5 Flash + Streamlit**.
         - utils.py
    
    ## Key Files and Responsibilities
+   
       - `sessions.py` handles HTTP session persistence.
       - `models.py` defines request and response objects.
 
