@@ -39,19 +39,22 @@ Built with **Jac + FastAPI + Gemini 2.5 Flash + Streamlit**.
    git clone https://github.com/murungadaniel/codebase_genius.git
    cd codebase_genius
 
-# 2️ Create and activate a virtual environment
-python -m venv .venv
-source .venv/bin/activate     # Linux / macOS
-# OR
-.venv\Scripts\activate        # Windows
+2. **Create and activate a virtual environment**
+```bash
+ python -m venv .venv
+ source .venv/bin/activate     # Linux / macOS
+ # OR
+ .venv\Scripts\activate        # Windows
 
-# 3️ Install dependencies
+3. **Install dependencies**
+**Backend (BE)**
+```bash
+cd BE
 pip install -r requirements.txt
-
-
-If you don’t have a requirements.txt yet, use:
-
-pip install jaclang byllm fastapi uvicorn[standard] streamlit python-dotenv requests
+**Frontend (FE)**
+```bash
+cd ../FE
+pip install -r requirements.txt
 
 # 4️ Configure environment variables
 
