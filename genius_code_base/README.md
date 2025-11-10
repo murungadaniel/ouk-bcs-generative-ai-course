@@ -111,14 +111,13 @@ Built with **Jac + FastAPI + Gemini 2.5 Flash + Streamlit**.
    1. Jac server: /health verifies that jac serve main.jac is reachable.
    
    2. Gemini API key: /health reports if the key is configured (but doesn’t block the app).
+---
+## Codebase Documentation
 
-# Codebase Documentation
-
-   ## Overview
-   
+   ### Overview
       The `requests` library provides an elegant and Pythonic interface for making HTTP requests.
    
-   ## Repository Structure
+   ### Repository Structure
    
       - requests/
         - api.py
@@ -126,10 +125,10 @@ Built with **Jac + FastAPI + Gemini 2.5 Flash + Streamlit**.
         - sessions.py
         - utils.py
    
-   ## Key Files and Responsibilities
+   ### Key Files and Responsibilities
    
-      - `sessions.py` handles HTTP session persistence.
-      - `models.py` defines request and response objects.
+     - **sessions.py** — Handles HTTP session persistence.  
+     - **models.py** — Defines request and response objects.
 
 
 
