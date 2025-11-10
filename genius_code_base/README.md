@@ -73,14 +73,14 @@ Built with **Jac + FastAPI + Gemini 2.5 Flash + Streamlit**.
 
      ```bash
      cd BE
-     jac serve main.jac --port 8000
+     jac serve main.jac 
      ```
     
 ###  Terminal 2 – FastAPI Backend
 
      ```bash
      cd BE
-     python api.py
+     uvicorn api:app --host 0.0.0.0 --port 8080
      ```
 
 ###  Terminal 3 – Streamlit Frontend
@@ -88,7 +88,7 @@ Built with **Jac + FastAPI + Gemini 2.5 Flash + Streamlit**.
      ```bash
      cd FE
      streamlit run app.py
-     ```
+     
      
      - Then open `http://localhost:8501` in your browser.
 
