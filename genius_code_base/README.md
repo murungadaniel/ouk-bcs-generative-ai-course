@@ -46,7 +46,8 @@ Built with **Jac + FastAPI + Gemini 2.5 Flash + Streamlit**.
 
      Create `BE/.env`:
     
-     ```env
+     ```bash
+     env
      GEMINI_API_KEY=your-key-here
      JAC_SERVER_URL=http://localhost:8000
      FASTAPI_PORT=8080
@@ -60,17 +61,20 @@ Built with **Jac + FastAPI + Gemini 2.5 Flash + Streamlit**.
 ###  Terminal 1 – Jac API Server
      ```bash
      cd BE
-     jac serve main.jac --port 8000```
+     jac serve main.jac --port 8000
+     ```
     
 ###  Terminal 2 – FastAPI Backend
      ```bash
      cd BE
-     python api.py```
+     python api.py
+     ```
 
 ###  Terminal 3 – Streamlit Frontend
      ```bash
      cd FE
-     streamlit run app.py```
+     streamlit run app.py
+     ```
 
      - Then open `http://localhost:8501` in your browser.
 
