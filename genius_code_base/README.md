@@ -1,21 +1,18 @@
-# codebase_genius🧠 Codebase Genius
+# Codebase Genius
 
-AI-powered documentation generator for any public GitHub repository, backed by Jac + FastAPI + Gemini 2.5 Flash + Streamlit.
+AI-powered tool that generates clean Markdown docs for any **public GitHub repo**.  
+Built with **Jac + FastAPI + Gemini 2.5 Flash + Streamlit**.
 
-# Overview
+---
 
-Codebase Genius automatically generates high-level, Markdown documentation for any public GitHub repository.
-It blends Jac (for workflow orchestration), FastAPI (for backend logic), Gemini 2.5 Flash (for AI-powered summarization), and Streamlit (for the web UI).
+## What It Does
+- Auto-generates documentation: overview, file structure, key files  
+- Saves docs locally in `BE/outputs/`  
+- Includes a simple **chat panel** to ask questions about the code  
 
-The result is an interactive app that can:
+---
 
-Generate structured documentation (overview, structure, key files, etc.)
-
-Store and view the docs locally
-
-Provide a chat interface for quick Q&A about the generated documentation
-
-# Architecture
+## Project Structure
  codebase_genius/
 │
 ├── BE/                     # Backend (Jac + FastAPI)
@@ -35,10 +32,12 @@ Provide a chat interface for quick Q&A about the generated documentation
 └── README.md               # Project documentation (this file)
 
 
-#  Installation & Setup
-# 1️ Clone the repo
-git clone https://github.com/yourusername/codebase_genius.git
-cd codebase_genius
+## Setup
+
+1. **Clone the repo**
+   ```bash
+   git clone https://github.com/murungadaniel/codebase_genius.git
+   cd codebase_genius
 
 # 2️ Create and activate a virtual environment
 python -m venv .venv
