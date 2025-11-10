@@ -78,78 +78,52 @@ Built with **Jac + FastAPI + Gemini 2.5 Flash + Streamlit**.
 
      - Then open `http://localhost:8501` in your browser.
 
-#  How It Works
+## How to Use
 
-User inputs a GitHub URL in Streamlit.
+   1. **Paste a public GitHub URL**  
+      Example: `https://github.com/psf/requests`
+   
+   2. **Click Generate Documentation**
+   
+   3. **Read, download, or chat with the docs**
 
-Frontend sends the URL to the FastAPI /generate endpoint.
+---
 
-Backend constructs a detailed prompt and calls Gemini 2.5 Flash.
+## API Endpoints
 
-Gemini returns structured Markdown documentation.
+   | Method | Endpoint     | Use                     |
+   |--------|--------------|-------------------------|
+   | `GET`  | `/health`    | Check if backend is up  |
+   | `POST` | `/generate`  | Generate docs from URL  |
+   
+   **Example request:**
+   ```bash
+   curl -X POST http://localhost:8080/generate \
+     -H "Content-Type: application/json" \
+     -d '{"repo_url": "https://github.com/psf/requests"}'
+   ```
+---
+## Health Check
 
-The docs are saved under BE/outputs/ and displayed in Streamlit.
-
-Users can read or download the docs, and use a lightweight chat panel for guidance.
-
-# Health Check
-
-Jac server: /health verifies that jac serve main.jac is reachable.
-
-Gemini API key: /health reports if the key is configured (but doesn’t block the app).
-
-Example:
-
-curl http://localhost:8080/health
-# → {"status": "ok", "gemini_configured": true}
-
-#  Example Output
-
-# Input:
-
-https://github.com/psf/requests
-
-
-Generated Output (excerpt):
+   1. Jac server: /health verifies that jac serve main.jac is reachable.
+   
+   2. Gemini API key: /health reports if the key is configured (but doesn’t block the app).
 
 # Codebase Documentation
 
-## Overview
-The `requests` library provides an elegant and Pythonic interface for making HTTP requests.
+   ## Overview
+      The `requests` library provides an elegant and Pythonic interface for making HTTP requests.
+   
+   ## Repository Structure
+      - requests/
+        - api.py
+        - models.py
+        - sessions.py
+        - utils.py
+   
+   ## Key Files and Responsibilities
+      - `sessions.py` handles HTTP session persistence.
+      - `models.py` defines request and response objects.
 
-## Repository Structure
-- requests/
-  - api.py
-  - models.py
-  - sessions.py
-  - utils.py
 
-## Key Files and Responsibilities
-- `sessions.py` handles HTTP session persistence.
-- `models.py` defines request and response objects.
-
-## How to Run Locally
-Install dependencies and import `requests` into any Python 3.7+ project.
-
-## Possible Improvements
-- Add type annotations to internal modules.
-- Improve connection-pool diagnostics.
-
-# API Endpoints Summary
-Method	Endpoint	   Description
-GET	   /health Check    backend + Jac connectivity
-POST	/generate	   Generate documentation from a GitHub URL
-
-Sample Request:
-
-curl -X POST http://localhost:8080/generate \
-  -H "Content-Type: application/json" \
-  -d '{"repo_url": "https://github.com/psf/requests"}'
-
-# Common Issues & Fixes
-Issue	Likely Cause	Fix
-Backend response not OK	Missing .env or GEMINI_API_KEY	Run load_dotenv() verified, check .env syntax
-Jac server not reachable	Forgot to run jac serve main.jac	Start Jac before FastAPI
-Empty docs	Invalid Gemini key or model name	Check your Gemini 2.5 Flash key
-Streamlit UI not updating	Cached state	Press R or rerun app
 
