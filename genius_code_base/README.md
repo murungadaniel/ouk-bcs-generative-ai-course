@@ -40,24 +40,25 @@ Built with **Jac + FastAPI + Gemini 2.5 Flash + Streamlit**.
    cd codebase_genius
 
 2. **Create and activate a virtual environment**
-```bash
- python -m venv .venv
- source .venv/bin/activate     # Linux / macOS
- # OR
- .venv\Scripts\activate        # Windows
-```
+   ```bash
+    python -m venv .venv
+    source .venv/bin/activate     # Linux / macOS
+    # OR
+    .venv\Scripts\activate        # Windows
+   ```
 
 3. **Install dependencies**
-**Backend (BE)**
-```bash
-cd BE
-pip install -r requirements.txt
-```
-**Frontend (FE)**
-```bash
-cd ../FE
-pip install -r requirements.txt
-```
+
+   **Backend (BE)**
+     ```bash
+     cd BE
+     pip install -r requirements.txt
+     ```
+   **Frontend (FE)**
+     ```bash
+     cd ../FE
+     pip install -r requirements.txt
+     ```
 # 4️ Configure environment variables
 
 Create a file named .env inside the BE/ directory:
