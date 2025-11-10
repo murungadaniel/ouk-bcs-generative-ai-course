@@ -12,19 +12,6 @@ Built with **Jac + FastAPI + Gemini 2.5 Flash + Streamlit**.
 
 ---
 
-## Project Structure
-   codebase_genius/
-   ├── BE/                # Backend
-   │   ├── main.jac       # Jac server
-   │   ├── api.py         # FastAPI + Gemini
-   │   ├── outputs/       # Generated .md files
-   │   └── .env           # API keys (not in git)
-   │
-   ├── FE/                # Frontend
-   │   ├── app.py         # Streamlit UI
-   │   └── components/    # Chat & doc viewer
-   │
-   └── README.md
 ## Setup
 
 1. **Clone the repo**
