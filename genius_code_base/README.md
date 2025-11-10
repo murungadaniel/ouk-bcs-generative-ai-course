@@ -45,17 +45,19 @@ Built with **Jac + FastAPI + Gemini 2.5 Flash + Streamlit**.
  source .venv/bin/activate     # Linux / macOS
  # OR
  .venv\Scripts\activate        # Windows
+```
 
 3. **Install dependencies**
 **Backend (BE)**
 ```bash
 cd BE
 pip install -r requirements.txt
+```
 **Frontend (FE)**
 ```bash
 cd ../FE
 pip install -r requirements.txt
-
+```
 # 4️ Configure environment variables
 
 Create a file named .env inside the BE/ directory:
